@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --color-bg-main: #0a0c10;
+  --color-bg-secondary: #12151c;
+  --color-bg-tertiary: #1a1e27;
+  --color-accent-primary: #3b82f6; 
+  --color-accent-secondary: #f97316;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  
+  --radius-4xl: 2rem;
+
+  /* Glass Theme */
+  --color-glass-bg: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --color-accent-glow: rgba(59, 130, 246, 0.5);
+}
+
+:root {
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+  --card-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer base {
+  * { 
+    @apply m-0 p-0 box-border scroll-smooth select-none; 
+  }
+  body { 
+    @apply bg-bg-main text-text-primary font-sans overflow-x-hidden antialiased;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4 { 
+    @apply font-heading; 
+  }
+}
+
+@layer components {
+  .glass { 
+    background: var(--glass-bg); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px); 
+    border: 1px solid var(--glass-border); 
+    box-shadow: var(--glass-shadow); 
+  }
+  
+  .glass-card { 
+    background: var(--card-gradient); 
+    backdrop-filter: blur(8px); 
+    border: 1px solid var(--glass-border); 
+    @apply rounded-3xl;
+    transition: var(--transition-smooth); 
+  }
+  
+  .glass-card:hover { 
+    border-color: var(--color-accent-primary); 
+    @apply -translate-y-1;
+    box-shadow: 0 10px 40px -10px var(--accent-glow); 
+  }
+  
+  .text-gradient { 
+    background: linear-gradient(to right, var(--color-text-primary), var(--color-accent-primary)); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+  }
+  
+  .container-custom { 
+    @apply max-w-7xl mx-auto px-8;
+  }
+  
+  .btn-primary { 
+    @apply bg-accent-primary text-white rounded-full font-semibold cursor-pointer transition-all duration-300;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); 
+  }
+  
+  .btn-primary:hover { 
+    @apply scale-105;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5); 
+  }
+  
+  .btn-outline { 
+    @apply bg-transparent text-text-primary rounded-full border border-glass-border font-semibold cursor-pointer transition-all duration-300;
+  }
+  
+  .btn-outline:hover { 
+    @apply bg-white/5 border-accent-primary;
+  }
+
+  .glow-mesh { 
+    @apply fixed inset-0 -z-10 pointer-events-none;
+    background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 40%), 
+                radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.1) 0%, transparent 40%); 
+  }
+
+  .form-input, .form-textarea {
+    @apply w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-text-primary outline-none transition-all duration-300;
+  }
+
+  .form-input:focus, .form-textarea:focus {
+    @apply border-accent-primary bg-white/10 ring-4 ring-accent-primary/10;
+  }
+
+  .form-label {
+    @apply block text-xs font-semibold uppercase tracking-wider text-text-secondary mb-2;
+  }
+}

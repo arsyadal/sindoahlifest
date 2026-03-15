@@ -1,17 +1,52 @@
-# React + Vite
+# Sindo Ahli Pest | Digital Company Profile
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, modern, and high-performance company profile for **Sindo Ahli Pest**, Indonesia's leading provider of pest control and termite protection services.
 
-Currently, two official plugins are available:
+![Sindo Ahli Pest Preview](https://github.com/user-attachments/assets/ae0723cf-26e6-425b-bed4-45308696085a) 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Vision
+To provide a safe and clean living environment for Indonesian families and businesses through professional-grade pest control solutions.
 
-## React Compiler
+## 🛠 Technology Stack
+This project leverages a cutting-edge web architecture for maximum performance and premium aesthetics:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite 8](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) (Utility-first, high performance)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) (Fluid scrolling and interactions)
+- **Icons**: [Lucide React](https://lucide.dev/) (Minimalist vector icons)
 
-## Expanding the ESLint configuration
+## ✨ Key Features
+- **Premium Dark Aesthetics**: A professional dark-mode theme with glassmorphism and subtle glows.
+- **Dynamic Services Grid**: Interactive cards displaying core services like termite protection, snake handling, and general pest control.
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop viewing.
+- **Floating Action**: Integrated WhatsApp consultation button for instant client engagement.
+- **Local Optimization**: Branch location sections with interactive map visualizers.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# sindoahlifest
+## 💻 Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install --legacy-peer-deps
+   ```
+
+### Development
+Run the local development server:
+```bash
+npm run dev
+```
+
+### Production Build
+Generate optimized production assets:
+```bash
+npm run build
+```
+
+---
+*Developed with ❤️ for Sindo Ahli Pest*
